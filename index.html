@@ -1,20 +1,186 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhamanika Raj | Data Analyst</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Dhamanika Raj Yekula's Data Analytics portfolio featuring projects, skills and certifications.">
+<title>Dhamanika Raj Yekula | Data Analyst Portfolio</title>
+<style>
+:root{--bg:#f7f8fc;--ink:#20243a;--muted:#687086;--accent:#6558e8;--card:#fff;--line:#e7e9f2}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"Segoe UI",Arial,sans-serif;line-height:1.7}
+a{color:inherit;text-decoration:none}
+nav{position:sticky;top:0;background:#ffffffed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:10}
+.nav-inner{max-width:1100px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:20px;font-weight:800;color:var(--accent)}
+.nav-links{display:flex;gap:22px;flex-wrap:wrap;font-size:14px;font-weight:600}
+.nav-links a:hover{color:var(--accent)}
+main{max-width:1100px;margin:auto;padding:0 24px}
+.hero{min-height:540px;display:grid;grid-template-columns:1.5fr .8fr;align-items:center;gap:48px;padding:75px 0}
+.eyebrow{color:var(--accent);font-weight:750;letter-spacing:1.5px;text-transform:uppercase;font-size:12px}
+h1{font-size:clamp(38px,6vw,64px);line-height:1.1;letter-spacing:-2px;margin:16px 0}
+h1 span{color:var(--accent)}
+.lead{font-size:19px;color:var(--muted);max-width:650px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:12px 19px;border-radius:10px;background:var(--accent);color:white;font-weight:700;font-size:14px}
+.btn.secondary{background:white;color:var(--ink);border:1px solid var(--line)}
+.btn:hover{transform:translateY(-2px)}
+.hero-card{background:linear-gradient(145deg,#eae7ff,#fff);border:1px solid #e0dcff;border-radius:28px;padding:30px;box-shadow:0 20px 55px #332b7b12}
+.avatar{width:90px;height:90px;border-radius:24px;background:var(--accent);color:white;display:grid;place-items:center;font-size:30px;font-weight:800;margin-bottom:22px}
+.hero-card h3{margin:0 0 5px;font-size:22px}
+.hero-card p{color:var(--muted);margin:0}
+.mini-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.stat{background:#ffffffc9;border-radius:13px;padding:14px}
+.stat strong{display:block;font-size:20px;color:var(--accent)}
+.stat small{color:var(--muted)}
+section{padding:65px 0;scroll-margin-top:75px}
+.section-head{margin-bottom:26px}
+.section-head h2{font-size:32px;letter-spacing:-.7px;margin:0}
+.section-head p{color:var(--muted);margin:5px 0}
+.about-grid,.project-grid,.cert-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 8px 25px #22234405}
+.card h3{margin:0 0 8px}
+.card p{color:var(--muted);margin:8px 0}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.tag{background:#f0efff;color:#5145c8;border-radius:7px;padding:5px 10px;font-size:12px;font-weight:700}
+.skills-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.skill{background:white;border:1px solid var(--line);border-radius:14px;padding:18px}
+.skill strong{display:block}
+.skill span{color:var(--muted);font-size:13px}
+.project-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.project-label{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--accent)}
+.project-links{display:flex;gap:16px;flex-wrap:wrap;margin-top:18px;font-size:13px;font-weight:750}
+.project-links a{color:var(--accent)}
+.project-links a:hover{text-decoration:underline}
+.timeline{border-left:2px solid #dedbff;padding-left:22px}
+.timeline-item{position:relative;margin:0 0 24px}
+.timeline-item:before{content:"";position:absolute;left:-29px;top:8px;width:12px;height:12px;background:var(--accent);border:3px solid var(--bg);border-radius:50%}
+.contact{background:#24213f;color:white;border-radius:24px;padding:35px}
+.contact p{color:#d4d2e6}
+.contact .btn.secondary{background:transparent;color:white;border-color:#625d83}
+footer{text-align:center;padding:30px 20px;color:var(--muted);font-size:13px}
+@media(max-width:760px){.hero{grid-template-columns:1fr;gap:28px;padding:50px 0}.hero-card{max-width:430px}.about-grid,.project-grid{grid-template-columns:1fr}.skills-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.nav-inner{align-items:flex-start;flex-direction:column}.nav-links{gap:13px}.section-head h2{font-size:27px}}
+@media(max-width:420px){main{padding:0 17px}.skills-grid{grid-template-columns:1fr}.nav-inner{padding:12px 17px}}
+</style>
 </head>
-
 <body>
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="#home">DRY.</a>
+    <div class="nav-links">
+      <a href="#about">About</a><a href="#skills">Skills</a>
+      <a href="#projects">Projects</a><a href="#learning">Learning</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
 
-    <h1>Hi, I'm Dhamanika Raj 👋</h1>
+<main>
+<header class="hero" id="home">
+  <div>
+    <div class="eyebrow">Aspiring Data Analyst · Open to opportunities</div>
+    <h1>Hi, I'm<br><span>Dhamanika Raj Yekula.</span></h1>
+    <p class="lead">I enjoy turning data into clear insights that help people understand problems and make better decisions. I'm building my skills in data analysis, reporting and visualization through hands-on practice and projects.</p>
+    <div class="buttons">
+      <a class="btn" href="#projects">Explore my projects ↗</a>
+      <a class="btn secondary" href="#contact">Get in touch</a>
+    </div>
+  </div>
+  <aside class="hero-card">
+    <div class="avatar">DR</div>
+    <h3>Curious mind. Data-driven approach.</h3>
+    <p>Agricultural Engineering graduate transitioning into Data Analytics.</p>
+    <div class="mini-stats">
+      <div class="stat"><strong>SQL</strong><small>Querying data</small></div>
+      <div class="stat"><strong>Excel</strong><small>Analysis & reporting</small></div>
+      <div class="stat"><strong>Power BI</strong><small>Visual storytelling</small></div>
+      <div class="stat"><strong>Python</strong><small>Data analysis</small></div>
+    </div>
+  </aside>
+</header>
 
-    <h2>Aspiring Data Analyst</h2>
+<section id="about">
+  <div class="section-head"><h2>About me</h2><p>A little about my background and what I'm working toward.</p></div>
+  <div class="about-grid">
+    <article class="card">
+      <h3>My journey</h3>
+      <p>I graduated in Agricultural Engineering in 2024 and am developing a career in Data Analytics. My learning focuses on preparing data, finding patterns, writing SQL queries and presenting findings in an understandable way.</p>
+    </article>
+    <article class="card">
+      <h3>What I bring</h3>
+      <p>A willingness to learn, structured problem-solving, attention to detail and a practical mindset. I aim to keep improving by applying concepts to projects and communicating results clearly.</p>
+      <div class="tags"><span class="tag">Problem-solving</span><span class="tag">Analytical thinking</span><span class="tag">Continuous learning</span></div>
+    </article>
+  </div>
+</section>
 
-    <p>
-        Welcome to my portfolio!
-    </p>
+<section id="skills">
+  <div class="section-head"><h2>Skills & tools</h2><p>My current learning toolkit.</p></div>
+  <div class="skills-grid">
+    <div class="skill"><strong>Microsoft Excel</strong><span>Lookups, formulas, PivotTables, charts</span></div>
+    <div class="skill"><strong>SQL</strong><span>Queries, joins, aggregations, analysis</span></div>
+    <div class="skill"><strong>Python</strong><span>Core Python and data-analysis practice</span></div>
+    <div class="skill"><strong>Power BI</strong><span>Reports, dashboards and data modeling</span></div>
+    <div class="skill"><strong>Pandas & NumPy</strong><span>Working with structured data</span></div>
+    <div class="skill"><strong>Statistics</strong><span>Descriptive statistics and data interpretation</span></div>
+  </div>
+</section>
 
+<section id="projects">
+  <div class="section-head"><h2>Featured projects</h2><p>Projects that demonstrate my learning, thinking and technical practice.</p></div>
+  <div class="project-grid">
+    <article class="card">
+      <div class="project-top"><span class="project-label">Web development · Prototype</span><span>01</span></div>
+      <h3>Cookbook — Home Chef Marketplace</h3>
+      <p>A responsive home-chef booking marketplace prototype exploring customer discovery, cook profiles, search filters and booking workflows. Built as a product concept to practice user-focused design.</p>
+      <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">UX</span></div>
+      <div class="project-links">
+        <a href="https://dhamanikarajyekula.github.io/cookbook-home-chef-marketplace/" target="_blank" rel="noopener">Live demo ↗</a>
+        <a href="https://github.com/dhamanikarajyekula/cookbook-home-chef-marketplace" target="_blank" rel="noopener">Source code ↗</a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="project-top"><span class="project-label">Data analytics · In progress</span><span>02</span></div>
+      <h3>My next data analysis project</h3>
+      <p>This space is ready for a completed Excel, SQL, Python or Power BI project. Add the dataset, the questions you investigated, your method, and the insights or recommendations you discovered.</p>
+      <div class="tags"><span class="tag">Data cleaning</span><span class="tag">Analysis</span><span class="tag">Insights</span></div>
+      <div class="project-links"><a href="https://github.com/dhamanikarajyekula" target="_blank" rel="noopener">View my GitHub ↗</a></div>
+    </article>
+  </div>
+</section>
+
+<section id="learning">
+  <div class="section-head"><h2>Education & professional learning</h2><p>The foundation I'm building on.</p></div>
+  <div class="card timeline">
+    <div class="timeline-item">
+      <h3>Bachelor's degree in Agricultural Engineering</h3>
+      <p>Graduated May 2024 · Developed a foundation in technical learning and problem-solving.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>Data Analytics learning journey</h3>
+      <p>Practicing Excel, SQL, Python, Power BI and statistics, with a focus on projects and job readiness.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>Courses & certifications</h3>
+      <p>Add the exact names of your completed courses and certificates here, along with verification links when available.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact">
+    <div class="eyebrow" style="color:#c5bfff">Let's connect</div>
+    <h2>Have an opportunity or a project in mind?</h2>
+    <p>I'm interested in entry-level Data Analyst and Business Analyst opportunities where I can learn, contribute and grow.</p>
+    <div class="buttons">
+      <a class="btn" href="https://github.com/dhamanikarajyekula" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn secondary" href="https://www.linkedin.com/" target="_blank" rel="noopener">Find me on LinkedIn</a>
+    </div>
+    <p style="font-size:12px">Replace the LinkedIn link above with your personal profile URL before publishing.</p>
+  </div>
+</section>
+</main>
+<footer>© 2026 Dhamanika Raj Yekula · Built with HTML & CSS</footer>
 </body>
 </html>
